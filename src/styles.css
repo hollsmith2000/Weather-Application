@@ -92,6 +92,7 @@ li {
 }
 
 .link {
+  text-decoration: none;
   font-size: 13px;
-  color: rgb(22, 1, 91);
+  text-align: center;
 }
