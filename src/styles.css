@@ -92,7 +92,7 @@ li {
 }
 
 .link {
-  text-decoration: none;
   font-size: 13px;
   text-align: center;
+  display: block;
 }
