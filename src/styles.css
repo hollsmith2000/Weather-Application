@@ -93,5 +93,8 @@ li {
 
 .link {
   font-size: 13px;
-  display: block;
+}
+
+.creator {
+  font-size: 13px;
 }
