@@ -96,3 +96,7 @@ li {
   text-align: center;
   display: block;
 }
+
+.creator {
+  display: none;
+}
