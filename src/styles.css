@@ -93,10 +93,5 @@ li {
 
 .link {
   font-size: 13px;
-  text-align: center;
   display: block;
-}
-
-.creator {
-  display: none;
 }
