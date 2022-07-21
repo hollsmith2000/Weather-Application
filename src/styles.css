@@ -8,6 +8,20 @@ li {
   list-style: none;
 }
 
+.btn {
+  background: #87cefa;
+  border: 1px solid #ffe69a;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.btn-info {
+  background: #87cefa;
+  border: 1px solid #ffe69a;
+  font-size: 20px;
+  line-height: 25px;
+  color: #ffff;
+}
 .display {
   text-align: center;
   max-width: 170px;
@@ -18,6 +32,11 @@ li {
   font-size: 20px;
 }
 
+.app {
+  background-color: #fffacd;
+  margin: 30px auto;
+  max-width: 700px;
+}
 .days {
   color: grey;
   font-weight: bolder;
@@ -33,11 +52,7 @@ li {
   padding: 30px;
 }
 
-.app {
-  background-color: #fffacd;
-  margin: 30px auto;
-  max-width: 700px;
-}
+
 .current {
   text-align: center;
   font-size: 70px;
@@ -65,20 +80,7 @@ li {
   border-radius: 10px;
 }
 
-.btn {
-  background: #87cefa;
-  border: 1px solid #ffe69a;
-  font-size: 20px;
-  line-height: 25px;
-}
 
-.btn-info {
-  background: #87cefa;
-  border: 1px solid #ffe69a;
-  font-size: 20px;
-  line-height: 25px;
-  color: #ffff;
-}
 .search-engine {
   padding: 10px;
 }
