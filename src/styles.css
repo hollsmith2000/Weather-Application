@@ -1,11 +1,17 @@
-h1 {
-  font-size: 30px;
+h1 { font-size: 30px;
   max-width: 250px;
   margin: 0;
 }
 
-li {
-  list-style: none;
+.temps {
+  background-color: #87cefa;
+  font-size: 20px;
+}
+
+
+.days {
+  color: grey;
+  font-weight: bolder;
 }
 
 .btn {
@@ -15,88 +21,11 @@ li {
   line-height: 25px;
 }
 
+
 .btn-info {
   background: #87cefa;
   border: 1px solid #ffe69a;
   font-size: 20px;
   line-height: 25px;
   color: #ffff;
-}
-.display {
-  text-align: center;
-  max-width: 170px;
-}
-
-.temps {
-  background-color: #87cefa;
-  font-size: 20px;
-}
-
-.app {
-  background-color: #fffacd;
-  margin: 30px auto;
-  max-width: 700px;
-}
-.days {
-  color: grey;
-  font-weight: bolder;
-}
-
-.sun {
-  margin: 19px 10px 0 10px;
-  text-align: center;
-  font-size: 40px;
-}
-
-.card-body {
-  padding: 30px;
-}
-
-
-.current {
-  text-align: center;
-  font-size: 70px;
-}
-
-.units {
-  font-size: 30px;
-}
-
-.figures {
-  padding: 30px;
-}
-.fiveday {
-  margin: 20px;
-}
-
-.current-info {
-  padding: 20px 10px;
-  font-size: 30px;
-}
-
-.Search {
-  display: inline;
-  width: 300px;
-  border-radius: 10px;
-}
-
-
-.search-engine {
-  padding: 10px;
-}
-
-.sunrise {
-  font-weight: bold;
-}
-
-.sunset {
-  font-size: 25px;
-}
-
-.link {
-  font-size: 13px;
-}
-
-.creator {
-  font-size: 13px;
 }
