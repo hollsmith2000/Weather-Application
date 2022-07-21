@@ -15,7 +15,7 @@ h1 { font-size: 30px;
 }
 
 .btn {
-  background: #87cefa;
+  background-color: #87cefa;
   border: 1px solid #ffe69a;
   font-size: 20px;
   line-height: 25px;
@@ -23,7 +23,7 @@ h1 { font-size: 30px;
 
 
 .btn-info {
-  background: #87cefa;
+  background-color: #87cefa;
   border: 1px solid #ffe69a;
   font-size: 20px;
   line-height: 25px;
