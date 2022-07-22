@@ -60,8 +60,8 @@ li {
 }
 
 .Search {
-  display: inline;
-  width: 300px;
+  display: inline !important;
+  width: 300px !important;
   border-radius: 10px;
 }
 
@@ -70,7 +70,10 @@ li {
   border: 1px solid #ffe69a;
   font-size: 20px;
   line-height: 25px;
+  color: #ffff;
   padding: 6px 12px;
+  border-radius: 8px;
+  margin: 5px 0 5px;
 }
 
 .info-btn {
@@ -80,6 +83,8 @@ li {
   line-height: 25px;
   color: #ffff;
   padding: 6px 12px;
+  border-radius: 8px;
+  margin: 5px 0 5px;
 }
 .search-engine {
   padding: 10px;
