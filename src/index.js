@@ -33,6 +33,9 @@ function showCurrentCondition(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed * 2.237
   );
+
+  document.querySelector("#precipitation").innerHTML =
+    response.data.main.precipitation.mode;
 }
 
 function searchCity(city) {
