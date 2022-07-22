@@ -65,7 +65,7 @@ li {
   border-radius: 10px;
 }
 
-.btn {
+.search-btn {
   background: #87cefa;
   border: 1px solid #ffe69a;
   font-size: 20px;
@@ -73,7 +73,7 @@ li {
   padding: 6px 12px;
 }
 
-.btn-info {
+.info-btn {
   background: #87cefa;
   border: 1px solid #ffe69a;
   font-size: 20px;
