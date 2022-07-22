@@ -66,18 +66,18 @@ li {
 }
 
 .btn {
-  background: #87cefa !important;
+  background: #87cefa;
   border: 1px solid #ffe69a;
   font-size: 20px;
   line-height: 25px;
 }
 
 .btn-info {
-  background: #87cefa !important;
+  background: #87cefa;
   border: 1px solid #ffe69a;
   font-size: 20px;
   line-height: 25px;
-  color: #ffff !important;
+  color: #ffff;
 }
 .search-engine {
   padding: 10px;
