@@ -34,8 +34,23 @@ function showCurrentCondition(response) {
     response.data.wind.speed * 2.237
   );
 
-  document.querySelector("#precipitation").innerHTML =
-    response.data.main.precipitation.mode;
+  let sunrise = document.querySelector(".x-rise");
+  let sec = response.data.sys.sunrise;
+  let sunriseTime = new Date(sec * 1000);
+  let time = sunriseTime.toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+  sunrise.innerHTML = `${time}`;
+
+  let sunset = document.querySelector(".set");
+  let sec1 = response.data.sys.sunset;
+  let sunsetTime = new Date(sec1 * 1000);
+  let times = sunsetTime.toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+  sunset.innerHTML = `${times}`;
 }
 
 function searchCity(city) {
