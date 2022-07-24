@@ -34,6 +34,12 @@ function showCurrentCondition(response) {
     response.data.wind.speed * 2.237
   );
 
+  let currentElement = document.querySelector("#icon");
+  currentElement.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+
   let sunrise = document.querySelector(".x-rise");
   let sec = response.data.sys.sunrise;
   let sunriseTime = new Date(sec * 1000);
@@ -51,6 +57,11 @@ function showCurrentCondition(response) {
     minute: "2-digit",
   });
   sunset.innerHTML = `${times}`;
+
+  celsiusTemperature = response.data.main.temp;
+
+  document.querySelector("#description").innerHTML =
+    response.data.weather[0].description;
 }
 
 function searchCity(city) {
@@ -86,3 +97,30 @@ currentLocationButton.addEventListener("click", getCurrentLocation);
 let showCity = document.querySelector("#city-search");
 showCity.addEventListener("submit", searchButton);
 searchCity("Manchester");
+
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+
+  let fahrenheitTemperature = Math.round(celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+}
+
+let celsiusTemperature = null;
+
+let fahrenheitLink = document.querySelector("#Fahrenheit");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#Celsius");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);

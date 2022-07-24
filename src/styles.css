@@ -18,6 +18,10 @@ li {
   font-size: 20px;
 }
 
+.units {
+  font-size: 10px;
+}
+
 .days {
   color: #87cefa !important;
   font-weight: bolder;
@@ -44,7 +48,7 @@ li {
 }
 
 .units {
-  font-size: 30px;
+  font-size: 20px !important;
 }
 
 .figures {
@@ -105,4 +109,10 @@ li {
 
 .creator {
   font-size: 13px;
+}
+
+.subheading {
+  font-size: 20px;
+  text-transform: capitalize;
+  margin: 0;
 }
