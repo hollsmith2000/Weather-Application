@@ -77,13 +77,23 @@
             <span class="sunrise">Sunrise <span class="x-rise"></span></span>
             Sunset <span class="set">21:37</span>
           </div>
-          <div class="row fiveday">
+          <div class="row fiveday" id="forecast">
             <div class="col">
               <div class="card display">
-                <span class="days">Mon</span>
-                <i class="fa-solid fa-cloud-sun sun"></i>
+                <div class="days">Mon</div>
+                <img
+                  src="https://openweathermap.org/img/wn/${
+                  forecastDay.weather[0].icon
+                }@2x.png"
+                  alt=""
+                  width="42"
+                  class="sun"
+                />
                 <br />
-                <span class="temps">12º | 14º </span>
+                <div class="temps">
+                  <span class="weather-forecast-max"> 14º </span>|
+                  <span class="weather-forecast-min">12º</span>
+                </div>
               </div>
             </div>
             <div class="col">

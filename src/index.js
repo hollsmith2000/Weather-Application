@@ -23,6 +23,14 @@ let date = `${day} ${hours}:${minutes}`;
 let elementDate = document.querySelector("#date");
 elementDate.innerHTML = date;
 
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "e479457657257579193e6c4c14f91ff2";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function showCurrentCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
@@ -62,6 +70,44 @@ function showCurrentCondition(response) {
 
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
+
+  getForecast(response.data.coord);
+}
+
+function displayForecast(response) {
+  let forecast = response.data.daily;
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row fiveday">`;
+
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        ` <div class="col">
+              <div class="card display">
+                <div class="days">${formatDay(forecastDay.dt)}</div>
+                <img src="https://openweathermap.org/img/wn/${
+                  forecastDay.weather[0].icon
+                }@2x.png"
+                alt=""
+                width="60"
+                class="sun"/>
+                <br />
+                <div class="temps">
+                  <span class="weather-forecast-max">${Math.round(
+                    forecastDay.temp.max
+                  )}º </span>|
+                  <span class="weather-forecast-min">${Math.round(
+                    forecastDay.temp.min
+                  )}º</span>
+                </div>
+              </div>
+             </div> 
+  `;
+    }
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
 
 function searchCity(city) {
@@ -69,6 +115,13 @@ function searchCity(city) {
   let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
   let apiUrl = `${apiEndpoint}?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showCurrentCondition);
+}
+
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[day];
 }
 
 function searchButton(event) {
